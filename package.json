@@ -1,11 +1,33 @@
 {
-  "name": "base32js",
-  "version": "1.0.0",
+  "name": "base32lib",
+  "version": "1.0.1",
   "description": "JavaScript Base32 encoding/decoding",
-  "main": "./lib/index",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Michele Dandrea",
-  "license": "ISC"
+  "scripts": {
+    "dist": "npx webpack"
+  },
+  "keywords": [
+    "base32",
+    "base32hex",
+    "crockford",
+    "z-32",
+    "rfc4648",
+    "geohash",
+    "encoding",
+    "decoding"
+  ],
+  "license": "MIT",
+  "main": "dist/base32.js",
+  "browser": "base32.js",
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/elephantcastle/base32js.git"
+  },
+  "devDependencies": {
+    "webpack": "*",
+    "webpack-cli": "^5.0.1"
+  }
 }
