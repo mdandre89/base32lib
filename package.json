@@ -1,0 +1,11 @@
+{
+  "name": "base32js",
+  "version": "1.0.0",
+  "description": "JavaScript Base32 encoding/decoding",
+  "main": "./lib/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michele Dandrea",
+  "license": "ISC"
+}
