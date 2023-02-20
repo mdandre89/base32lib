@@ -4,7 +4,9 @@
   "description": "JavaScript Base32 encoding/decoding",
   "author": "Michele Dandrea",
   "scripts": {
-    "dist": "npx webpack"
+    "dist": "npx webpack",
+    "lint": "eslint .",
+    "test": "node test"
   },
   "keywords": [
     "base32",
@@ -27,7 +29,9 @@
     "url": "git://github.com/elephantcastle/base32js.git"
   },
   "devDependencies": {
+    "eslint": "^8.34.0",
     "webpack": "*",
-    "webpack-cli": "^5.0.1"
+    "webpack-cli": "^5.0.1",
+    "standard": "^8.0.0-beta.5"
   }
 }
