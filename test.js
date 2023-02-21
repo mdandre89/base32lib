@@ -72,29 +72,6 @@ function makeWord(length, characters) {
   return result;
 }
 
-/* Creates a uppercase hex number with at least length digits from a given number */
-function fixedHex(number, length){
-  var str = number.toString(16).toUpperCase();
-  while(str.length < length)
-      str = "0" + str;
-  return str;
-}
-
-/* Creates a unicode literal based on the string */    
-function unicodeLiteral(str){
-  var i;
-  var result = "";
-  for( i = 0; i < str.length; ++i){
-      /* You should probably replace this by an isASCII test */
-      if(str.charCodeAt(i) > 126 || str.charCodeAt(i) < 32)
-          result += "\\u" + fixedHex(str.charCodeAt(i),4);
-      else
-          result += str[i];
-  }
-
-  return result;
-}
-
 testCases.forEach(function (testCase) {
   const result = base32lib.decode(testCase[2], testCase[0])
   assert( result === testCase[1] )

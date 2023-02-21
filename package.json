@@ -1,6 +1,6 @@
 {
   "name": "base32lib",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "JavaScript Base32 encoding/decoding",
   "author": "Michele Dandrea",
   "scripts": {
@@ -19,7 +19,7 @@
     "decoding"
   ],
   "license": "MIT",
-  "main": "lib/base32.js",
+  "main": "lib/index.js",
   "browser": "dist/base32.js",
   "engines": {
     "node": ">=0.12.0"
