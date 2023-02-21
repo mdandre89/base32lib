@@ -4,6 +4,7 @@
 /***/ 568:
 /***/ ((module) => {
 
+// eslint-disable-next-line no-extra-semi
 ;(function(){
 var encodingType = {
   'crockford': {
@@ -43,7 +44,7 @@ var setAlphabet = function(type){
       BASE32_ALPHABET[base32Chars[i]] = i
   }
   for (var key in alias) {
-      if (!alias.hasOwnProperty(key)) continue
+      if (!Object.prototype.hasOwnProperty.call(alias, key)) continue
       BASE32_ALPHABET[key] = BASE32_ALPHABET['' + alias[key]]
   }
   if (['32hex', 'rfc4648'].includes(type)) {
@@ -52,7 +53,7 @@ var setAlphabet = function(type){
 }
 
 function encode(text, type = 'rfc4648') {
-  if (type && encodingType.hasOwnProperty(type)) {
+  if (type && Object.prototype.hasOwnProperty.call(encodingType, type)) {
     setAlphabet(type)
   }else{
     return 'These are the only encodings available: crockford, rfc4648, z-32, geohash, 32hex'
@@ -78,7 +79,7 @@ function encode(text, type = 'rfc4648') {
   return encoded + "=".repeat(paddingLength);
 }
 function decode(encoded, type = 'rfc4648') {
-  if (type && encodingType.hasOwnProperty(type)) {
+  if (type && Object.prototype.hasOwnProperty.call(encodingType, type)) {
     setAlphabet(type)
   }else{
     return 'These are the only encodings available: crockford, rfc4648, z-32, geohash'
@@ -109,6 +110,7 @@ var base32lib = {
 }
 
 if (typeof window !== 'undefined') {
+  // eslint-disable-next-line no-undef
   window.base32lib = base32lib
 }
 
