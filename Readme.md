@@ -24,9 +24,9 @@ const base32lib = require('base32lib')
 // encodings available: crockford, rfc4648, z-32, geohash, 32hex
 // The default one is RFC4648
 const encoded = base32lib.encode('some data to encode 123', 'rfc4648') //onxw2zjamrqxiyjaorxsazlomnxwizjagezdg===
-const encoded2 = base32lib.encode('Some data to encOde', 'rfc4648') //onxw2zjamrqxiyjaorxsazlomnxwizjagezdg===
+const encoded2 = base32lib.encode('Some data to encOde 123') //onxw2zjamrqxiyjaorxsazlomnxwizjagezdg===
 console.log(encoded === encoded2) // true
-const decoded = base32lib.decode(encoded) // some data to encode
+const decoded = base32lib.decode(encoded) // some data to encode 123
 ```
 
 The main specifications of something called "Base 32" are present in this library: RFC4648, Crockford, z-32, geohash, 32hex - see [Wikipedia](http://en.wikipedia.org/wiki/Base_32) for some of them.
