@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "eslint": "^8.34.0",
-    "standard": "^8.0.0-beta.5",
+    "standard": "^17.1.2",
     "webpack": "*",
     "webpack-cli": "^5.0.1"
   }
